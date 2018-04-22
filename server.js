@@ -46,6 +46,7 @@ app.get('/',(req,res)=>{
     welcomeMessage:'Hello Nibbers'
   });
 });
+
 app.get('/about',(req,res)=>{
   res.render('about.hbs',{
     pageTitle:'About Page'
@@ -58,6 +59,9 @@ app.get('/bad',(req,res)=>{
     error:"Bad request"
   })
 });
+app.get('/projects',(req,res)=>{
+  res.render('projects.hbs');
+})
 
 app.listen(port,()=>{
   console.log(`server is up on ${port}`);
